@@ -1,0 +1,10 @@
+INFO:root:def - setting.setting -- start
+INFO:root:def - setting.language -- start
+INFO:root:def - setting.language -- not file setting
+INFO:root:def - setting.language -- get user language
+INFO:root:def - setting.language -- write user language to setting file
+INFO:root:def - setting.setting -- start
+INFO:root:def - setting.language -- start
+INFO:root:def - setting.language -- file setting is found
+INFO:root:def - setting.language -- setting file is reading
+INFO:root:def - setting.language -- languageUser is setting
