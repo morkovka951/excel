@@ -1,5 +1,7 @@
 # This is a sample Python script.
 from openpyxl import load_workbook
+
+import functionMain
 import setting
 import getDataOneExcel
 import logging
@@ -27,4 +29,4 @@ if __name__ == '__main__':
     setting.setting()
     #print(setting.languageUser())
     #print(len(setting.settingList))
-    getDataOneExcel.languageUser2222()
+    functionMain.main()

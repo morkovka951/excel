@@ -2,6 +2,7 @@ import os
 import logging
 
 settingList = {}
+languageUser = ''
 
 def setting():
     logging.info('def - setting.setting -- start')
@@ -10,6 +11,7 @@ def setting():
 def language():
     logging.info('def - setting.language -- start')
     global settingList
+    global languageUser
     fileWithSetting = "Setting.conf"
     fileList = os.listdir(os.getcwd())
     if fileWithSetting not in fileList:
@@ -20,7 +22,7 @@ def language():
         write2settingFile(languageUser, 'w')
         logging.info('def - setting.language -- write user language to setting file')
     else:
-        logging.info('def - setting.language -- file setting is found')
+        logging.error('def - setting.language -- file setting is found')
         with open(fileWithSetting) as fileWithSetting:
             logging.info('def - setting.language -- setting file is reading')
             lines = fileWithSetting.readlines()
@@ -35,7 +37,6 @@ def write2settingFile(settingCommand, proppertis):
 def languageUser():
     for key in settingList.keys():
         if key == 'languageUser':
-            lan = 'languageUser = ' + settingList.get(key)
             return settingList.get(key)
 
 
