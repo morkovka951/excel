@@ -1,3 +1,4 @@
+import getDataOneExcel
 import setting
 import logging
 
@@ -10,13 +11,15 @@ def main():
     menu(languageUser)
 
 def getLanguageUser():
-    logging.info('def - getLanguageUser -- start')
+    logging.info('def - functionMain.getLanguageUser -- start')
     global languageUser
     languageUser = setting.languageUser()
 
+# main menu for user
 def menu(languageUser):
     if languageUser == "ru":
         print('работа с одним Excel файлом')
+        getDataOneExcel.main()
 
     elif languageUser == "cz":
         print('prace z jednim Excel souborem')

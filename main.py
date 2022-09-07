@@ -23,10 +23,28 @@ def excel():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(filename="sample.log", level=logging.INFO)
+    #logging.basicConfig(filename="sample.log", level=logging.INFO)
+    #console_out = logging.StreamHandler()
+    #logging.info('--------- start APP ---------')
+    #logging.basicConfig(handlers=(file_log, console_out),
+    #                    format='[%(asctime)s | %(levelname)s]: %(message)s',
+    #                    datefmt='%m.%d.%Y %H:%M:%S',
+    #                    level=logging.INFO)
+
+    file_log = logging.FileHandler('sample.log')
+    console_out = logging.StreamHandler()
+
+    logging.basicConfig(handlers=(file_log, console_out),
+                        format='[%(asctime)s | %(levelname)s]: %(message)s',
+                        datefmt='%m.%d.%Y %H:%M:%S',
+                        level=logging.INFO)
+
+    logging.info('Info message??))')
+
+
     print_hi('PyCharm')
     #excel()
     setting.setting()
-    #print(setting.languageUser())
+    print(setting.languageUser())
     #print(len(setting.settingList))
     functionMain.main()
